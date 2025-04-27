@@ -1,0 +1,358 @@
+/* General styles for larger screens (default) */
+
+/* Styles for screens smaller than 768px (phones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .container {
+        height: auto; /* Allow the container to adjust its height */
+        width: 100%; /* Make the container full width */
+    }
+
+    .field {
+        flex-direction: column; /* Stack fieldsets vertically */
+        gap: 10px; /* Reduce the gap between fieldsets */
+        align-items: center; /* Center-align the fieldsets */
+    }
+
+    .sfield {
+        width: 90%; /* Make fieldsets take up most of the screen width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .sfield img {
+        width: 100%; /* Make images responsive */
+    }
+
+    #class, #class1, #class2 {
+        font-size: 16px; /* Adjust font size for links */
+        right: auto; /* Remove absolute positioning */
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    svg {
+        width: 15px; /* Adjust SVG size */
+        top: 10px; /* Adjust position */
+    }
+}
+
+@font-face {
+    font-family:good time ;
+    src: url(Good\ Times\ Rg.otf);
+}
+
+@font-face {
+    font-family: neur;
+    src: url(Neuropolitical\ Rg.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    height: 100vh;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.container{
+    position: absolute;
+    height: 90px;
+    background:linear-gradient(rgb(183, 7, 7) ,rgb(0, 0, 0));;
+    width: 100%;
+}
+
+/* .myh1{
+    position: absolute;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.608);
+    right: 105px;
+    top: 10px;
+    font-family:good time ;
+    transition: all 0.5s ease-in-out;
+} */
+
+.myp{
+    position: absolute;
+    font-size: 11px;
+    right: 20px;
+    top: 55px;
+    color: aliceblue;
+    font-family: neur;
+}
+
+#class {
+    position: absolute;
+    right: 840px;
+    top: 30px;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    display: inline-block; /* Required for pseudo-elements to work properly */
+    padding-bottom: 2px; /* Space for the animated border */
+    font-family: neur;
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    transform-origin: 50% 50%;
+}
+
+#class::after {
+    content: '';
+    display: block;
+    width: 0; /* Start with 0 width */
+    height: 1px; /* Border thickness */
+    background: white;
+    transition: width 0.5s ease-in-out; /* Animate only the width */
+}
+
+#class:hover::after {
+    width: 100%; /* Expand to full width on hover */
+}
+
+#class:hover{
+    font-size: 25px;
+    transform: scale(1);
+}
+
+
+#class1{
+    position: absolute;
+    right: 1200px;
+    top: 30px;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    display: inline-block; /* Required for pseudo-elements to work properly */
+    padding-bottom: 2px; /* Space for the animated border */
+    font-family: neur;
+    transition: all 0.5s ease-in-out;
+}
+
+#class1::after {
+    content: '';
+    display: block;
+    width: 0; /* Start with 0 width */
+    height: 1px; /* Border thickness */
+    background: white;
+    transition: width 0.5s ease-in-out; /* Animate only the width */
+}
+
+#class1:hover::after {
+    width: 100%; /* Expand to full width on hover */
+}
+
+#class1:hover{
+    font-size: 25px;
+}
+
+
+#class2{
+    position: absolute;
+    right: 1540px;
+    top: 30px;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    display: inline-block; /* Required for pseudo-elements to work properly */
+    padding-bottom: 2px; /* Space for the animated border */
+    transition: all 0.5s ease-in-out;
+    font-family: neur;
+}
+
+#class2::after {
+    content: '';
+    display: block;
+    width: 0; /* Start with 0 width */
+    height: 1px; /* Border thickness */
+    background: white;
+    transition: width 0.5s ease-in-out; /* Animate only the width */
+}
+
+#class2:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    
+}
+#class2:hover{
+    font-size: 25px;
+}
+
+svg{
+    position:absolute;
+    width: 20px;
+    fill: white;
+    top: 29px;
+    left: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+svg:hover{
+    width: 25px;  
+}
+
+.myh1:hover{
+    width: ;
+    font-size: 35px;
+    
+}
+
+
+
+.animated-name {
+    font-family:good time ;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.608);
+    color: #000000;
+    font-size: 2rem;
+    opacity: 100%;
+    transform: translateY(0);
+    animation: fadeSlide 2s ease-in-out;
+    position: absolute;
+    right: 80px;
+    top: 10px;
+  }
+  
+  @keyframes fadeSlide {
+    0% {
+      opacity: 100;
+      transform: translateY(-50px);
+    }
+    50% {
+      opacity: 100;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 100;
+      transform: translateY(0px);
+    }
+}
+
+.field{
+    position: absolute;
+    top: 20%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.sfield{
+    width: 400px;
+    height: 400px;
+}
+
+#img{
+    position: absolute;
+    width: 300px;
+    top: 3.2rem;
+    left: 2.5rem;
+    transition: all 0.5s ease;
+    transform-origin: center;
+    cursor: pointer; /* Optional: Change cursor to pointer on hover */
+
+}
+
+#img:hover{
+    width: 320px;
+    transform: scale(1.1);
+}
+
+#img2 {
+    position: relative; /* Change to relative */
+    width: 80%; /* Adjust size */
+    transition: all 0.5s ease;
+    transform-origin: center;
+    cursor: pointer;
+}
+
+#img2:hover {
+    width: 330px;
+    transform: scale(1.1);
+}
+
+#img3 {
+
+        position: relative; /* Change to relative */
+        width: 80%; /* Adjust size */
+        transition: all 0.5s ease;
+        transform-origin: center;
+        cursor: pointer;
+    
+}
+
+#img3:hover {
+    width: 320px;
+    transform: scale(1.1);
+}
+
+#img4 {
+        position: relative; /* Change to relative */
+        width: 80%; /* Adjust size */
+        transition: all 0.5s ease;
+        transform-origin: center;
+        cursor: pointer;
+}
+
+#img4:hover {
+    width: 320px;
+    transform: scale(1.1);
+}
+
+.sfield {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5c); /* Gradient background */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent content overflow */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sfield:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+.sfield legend {
+    font-family: 'neur', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sfield img {
+    width: 80%; /* Adjust image size */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sfield img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+#img, #img2, #img3, #img4 {
+    position: relative; /* Change to relative */
+    width: 80%; /* Adjust image size */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    transform-origin: center;
+    cursor: pointer; /* Optional: Change cursor to pointer on hover */
+}
